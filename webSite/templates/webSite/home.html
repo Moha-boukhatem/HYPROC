@@ -1,0 +1,57 @@
+{% extends 'webSite/main.html' %}
+{% load static %}
+
+{% block content %}
+<section class="back col">
+    <div class="row">
+        <div class="back1 col-lg-4 col-md-12">
+            <h2 style="font-size: 2em;">Maintenance Web Site</h2>
+           <a href="{% url 'login' %}"><button class="button"  >connexion</button></a>
+            
+            <p>Vous n'avez pas un compte ? <a class="inscrire" onclick="document.getElementById('id02').style.display='block'">Inscrivez-vous</a></p>
+        
+
+            <div id="id02" class="modal">
+                <form class="modal-content animate" action="/action_page.php" method="post">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    </div>
+                
+                    <div class="container">
+                        <label for="uname"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+                        <label for="psw"><b>Mot de passe</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                        <label for="psw"><b>Confirmer Mot de passe</b></label>
+                        <input type="password" placeholder="Confirm Password" name="psw" required>
+                        <button type="submit">connexion</button>
+                    </div>
+        
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            
+            <script>
+            var modal = document.getElementById('id01');
+            window.onclick = function(event) {
+                    if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            var modal = document.getElementById('id02');
+            window.onclick = function(event) {
+                    if (event.target == modal) {
+                    modal.style.display ="none"
+                }
+            }
+            </script>
+      </div>
+        
+      <div class="back2 col-lg-7 col-md-12">
+        <img src="{% static 'images/background1.png' %} " alt="background">
+      </div>    
+    </div>
+</section>
+{% endblock %}

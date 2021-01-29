@@ -1,0 +1,17 @@
+
+{% extends 'webSite/main.html' %}
+{% block content %}
+<h1>chefsection</h1>
+{% for i in u %}
+
+<a href="{% url 'utilisateur' i.id %} "> {{i.nom}} {{i.prenom}} </a>
+<br>
+
+{% endfor %}
+<form action="#" method="POST">
+    {% csrf_token %}
+    {{modifier}}
+    <input type="submit" name="submit">
+</form>
+{% endblock %}
+

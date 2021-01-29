@@ -1,0 +1,19 @@
+{% extends 'webSite/main.html' %}
+{% load static %}
+
+{% block content %}
+    
+        <div class="container">
+            <label for="uname"><b>Email</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for="psw"><b>Mot de passe</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <button type="submit">connexion</button>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <a href="#"><button type="button">Cancel</button></a>
+        </div>
+    </form>
+</div>
+{% endblock %}

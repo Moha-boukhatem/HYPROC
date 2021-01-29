@@ -1,0 +1,43 @@
+{% extends 'webSite/main.html' %}
+
+{% block content %}
+
+<div  class="chefdepartement">
+    <section  class="back col">
+        
+        <div  class="row">
+            <div class="back2 col-lg-4 col-md-4">
+                <a href=" {% url 'demandeTravail' %}"><h2>Demandes de Travail</h2></a>
+            </div>
+            
+            <div class="back2 col-lg-4 col-md-4">
+                <a href="{% url 'rapports' %}"><h2>Rapports</h2></a>
+            </div>   
+            
+            <div class="back2 col-lg-4 col-md-4">
+                <a href="{% url 'ordreTravail' %}"><h2>Ordres de Travail</h2></a>
+            </div>
+        </div>
+
+        
+        <div style="margin-top:6.5%"class="row">
+            <div class="back2 col-lg-4 col-md-4">
+                <a href="{% url 'equipements' %}"><h2>Equipements</h2></a>
+            </div>
+            
+            <div class="back2 col-lg-4 col-md-4">
+                <a href="{% url 'outillages' %}"><h2>Outillages</h2></a>
+            </div>   
+            
+            <div class="back2 col-lg-4 col-md-4">
+                <a href="{% url 'ouvriers' %}"><h2>Ouvriers</h2></a>
+            </div>
+        </div>
+    </section>
+<div>
+
+
+
+
+{% endblock %}
+
